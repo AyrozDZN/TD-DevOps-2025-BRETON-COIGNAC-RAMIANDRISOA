@@ -15,7 +15,6 @@ def index():
         console.error("Error fetching cat image:", error);
     });
     """
-    
     return f"""
     <html>
         <head>
