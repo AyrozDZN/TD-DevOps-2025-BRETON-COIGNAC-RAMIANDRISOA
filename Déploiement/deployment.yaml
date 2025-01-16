@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yaaahh-deployment
+  labels:
+    app: yaaahh
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: yaaahh
+  template:
+    metadata:
+      labels:
+        app: yaaahh
+    spec:
+      containers:
+      - name: yaaahh
+        image: ayrozdzn/td_devops:v1.0.0
+        ports:
+        - containerPort: 5000
+        env:
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.name
