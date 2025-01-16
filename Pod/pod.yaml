@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
   - name: yaaahh-pod
-    image: ayrozdzn/td_devops:v1.0.0
+    image: ayrozdzn/td_devops:v1.0.CAT.2
     ports:
     - containerPort: 5000  # The port that the container will listen on
     env:
